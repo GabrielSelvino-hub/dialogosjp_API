@@ -1,5 +1,5 @@
-# Etapa 1: Build - Usa o SDK do .NET 6.0 para compilar o projeto
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+# Etapa 1: Build - AGORA USANDO O SDK DO .NET 8.0
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /app
 
 # Copia os arquivos de projeto e restaura os pacotes (NuGet)
@@ -10,8 +10,8 @@ RUN dotnet restore
 COPY . ./
 RUN dotnet publish -c Release -o out
 
-# Etapa 2: Execução - Usa uma imagem menor, apenas com o necessário para rodar
-FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS runtime
+# Etapa 2: Execução - AGORA USANDO A RUNTIME DO ASP.NET 8.0
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
 WORKDIR /app
 COPY --from=build /app/out ./
 
