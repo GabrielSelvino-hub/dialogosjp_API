@@ -1,0 +1,43 @@
+# Build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+*.sln.iml
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Dotnet watch
+**/Properties/launchSettings.json
+
+# Entity Framework
+Migrations/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Others
+*.swp
+*.tmp
+*.bak
+*.old
+
+# Secrets
+secrets.json
+.env
+.env.* 
