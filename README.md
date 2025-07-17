@@ -24,7 +24,7 @@ API para gerenciamento de diálogos em japonês, permitindo criar, listar e edit
 2. **Configure o arquivo `.env`:**
    Crie um arquivo `.env` na raiz do projeto com o seguinte conteúdo:
    ```env
-   DIALOGOS_API_KEY=dialogoslv
+   DIALOGOS_API_KEY=senha
    ```
    (Você pode escolher outro valor para a chave se desejar)
 
