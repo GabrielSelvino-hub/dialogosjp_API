@@ -1,5 +1,8 @@
 using DialogosAPI.Data;
 using Microsoft.EntityFrameworkCore;
+using DotNetEnv; // Adiciona o using para DotNetEnv
+
+Env.Load(); // Carrega as variáveis do .env
 
 var builder = WebApplication.CreateBuilder(args);
 

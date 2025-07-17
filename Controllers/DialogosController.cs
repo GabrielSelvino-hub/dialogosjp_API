@@ -28,8 +28,8 @@ namespace DialogosAPI.Controllers
         [HttpPost]
         public async Task<ActionResult<Dialogo>> PostDialogo(Dialogo dialogo)
         {
-            // Segurança básica por header
-            if (!Request.Headers.TryGetValue("X-Api-Key", out var apiKey) || apiKey != "dgselvino")
+            var apiKeyEnv = Environment.GetEnvironmentVariable("DIALOGOS_API_KEY");
+            if (!Request.Headers.TryGetValue("X-Api-Key", out var apiKey) || apiKey != apiKeyEnv)
             {
                 return Unauthorized("Chave de API inválida ou ausente.");
             }
@@ -43,8 +43,8 @@ namespace DialogosAPI.Controllers
         [HttpPut("{id}")]
         public async Task<IActionResult> PutDialogo(int id, Dialogo dialogo)
         {
-            // Segurança básica por header
-            if (!Request.Headers.TryGetValue("X-Api-Key", out var apiKey) || apiKey != "dgselvino")
+            var apiKeyEnv = Environment.GetEnvironmentVariable("DIALOGOS_API_KEY");
+            if (!Request.Headers.TryGetValue("X-Api-Key", out var apiKey) || apiKey != apiKeyEnv)
             {
                 return Unauthorized("Chave de API inválida ou ausente.");
             }
